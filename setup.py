@@ -22,6 +22,7 @@
 from setuptools import setup, find_packages
 from codecs import open
 from os import path
+import versioneer
 
 here = path.abspath(path.dirname(__file__))
 
@@ -30,14 +31,14 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='PyTrade',
-    version='0.0.1',
+    name='pytrade',
+    url="http://pytrade.io",
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     description='Pythonic Trading Framework',
-    long_description=long_description,
-    url='https://pytrade.io',
-    author='Ran Aroussi',
+    author='Ran Aroussi.',
     author_email='ran@aroussi.com',
-    license='Apache',
+    license='Apache 2.0',
     classifiers=[
         'License :: OSI Approved :: Apache Software License',
         'Development Status :: 1 - Planning',
@@ -47,31 +48,30 @@ setup(
         # 'Development Status :: 5 - Production/Stable',
         # 'Development Status :: 6 - Mature',
 
+        'Natural Language :: English',
+        'Programming Language :: Python',
+        # 'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
 
         'Operating System :: OS Independent',
-
-        'Intended Audience :: Developers',
-        'Intended Audience :: Financial and Insurance Industry',
         'Intended Audience :: Science/Research',
 
         'Topic :: Office/Business :: Financial',
         'Topic :: Office/Business :: Financial :: Investment',
+        'Topic :: Scientific/Engineering :: Information Analysis',
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules',
-
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
     ],
 
     platforms=['any'],
-    keywords='pytrade qtpylib qtpy algotrading algo trading quant backtest backtester interactive brokers ibpy',
+    keywords='qtpylib algotrading algo trading quant backtest backtester',
     packages=find_packages(exclude=[
         'contrib', 'docs', 'tests', 'demo', 'demos', 'examples']),
     install_requires=[],
     entry_points={
         'console_scripts': [
-            'sample=sample:main',
+            'pytrade=pytrade:main',
         ],
     },
     # include_package_data=True,

@@ -3,4 +3,6 @@ include LICENSE.txt
 
 # Include the data files
 include qtpylib/schema.sql
-recursive-include qtpylib/_webapp *
+recursive-include qtpylib/_webapp *include versioneer.py
+include pytrade/_version.py
+include versioneer.py

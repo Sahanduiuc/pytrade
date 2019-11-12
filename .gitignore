@@ -10,10 +10,5 @@ dist
 !/docs/build/epub/*.epub
 pytrade.egg-info
 PyTrade.egg-info
-Icon
-/sql-aggregate.txt
-/tests
 .vscode
 nosy.py
-Icon
-
